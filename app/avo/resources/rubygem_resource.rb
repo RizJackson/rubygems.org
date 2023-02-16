@@ -15,6 +15,7 @@ class RubygemResource < Avo::BaseResource
   }
 
   action ReleaseReservedNamespace
+  action AddOwner
 
   class IndexedFilter < ScopeBooleanFilter; end
   filter IndexedFilter, arguments: { default: { with_versions: true, without_versions: true } }
